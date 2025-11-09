@@ -1,10 +1,11 @@
+/* -------------------- 기본 설정 -------------------- */
 body {
   margin: 0;
   font-family: 'Noto Sans KR', sans-serif;
   background: #f5f5f5;
 }
 
-/* 상단 헤더 */
+/* -------------------- 헤더 -------------------- */
 header {
   width: 100%;
   background: white;
@@ -39,11 +40,12 @@ header {
   cursor: pointer;
 }
 
-/* 내비게이션 */
+/* -------------------- 내비게이션 -------------------- */
 nav {
   background: white;
   border-bottom: 1px solid #ddd;
 }
+
 nav ul {
   display: flex;
   gap: 25px;
@@ -51,32 +53,51 @@ nav ul {
   margin: 0;
   padding: 15px 40px;
 }
+
 nav li {
   cursor: pointer;
 }
 
-/* 메인 배너 */
+/* -------------------- 메인 배너 -------------------- */
 .banner {
+  position: relative;        /* 텍스트 배치용 */
   width: 100%;
-  height: 350px;
+  height: 200px;
+  overflow: hidden;
   background: #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  color: #666;
 }
 
-/* 특가 여행 섹션 */
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-text {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -200%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  text-align: center;
+}
+
+/* -------------------- 섹션 제목 -------------------- */
 .section-title {
   font-size: 24px;
   font-weight: bold;
   padding: 30px 40px 10px;
 }
 
+/* -------------------- 포토 그리드 -------------------- */
 .photo-grid {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;         /* 화면 줄어들면 줄바꿈 */
   padding: 0 40px 40px;
 }
 
@@ -92,8 +113,9 @@ nav li {
   font-weight: bold;
 }
 
-/* 로그인 / 회원가입 공통 스타일 */
-.login-container, .signup-container {
+/* -------------------- 로그인 / 회원가입 -------------------- */
+.login-container,
+.signup-container {
   width: 400px;
   margin: 60px auto;
   padding: 30px;
@@ -117,7 +139,8 @@ nav li {
 .kakao { background: #FDDC3F; }
 .naver { background: #1EC800; color: white; }
 
-.normal-login input, .signup-box input {
+.normal-login input,
+.signup-box input {
   width: 100%;
   padding: 12px;
   margin: 8px 0;
@@ -125,7 +148,8 @@ nav li {
   border-radius: 8px;
 }
 
-.login-btn, .signup-btn {
+.login-btn,
+.signup-btn {
   width: 100%;
   padding: 12px;
   margin-top: 10px;
@@ -137,44 +161,68 @@ nav li {
   cursor: pointer;
 }
 
-.photo-grid {
-  display: flex;           /* 가로로 나란히 배치 */
-  gap: 10px;               /* 사진 사이 간격 */
-  flex-wrap: wrap;         /* 화면 좁으면 다음 줄로 */
-}
-
+/* -------------------- 이미지 박스 -------------------- */
 .image-box {
-    width: 300px;            /* 박스 너비 */
-    height: 300px;           /* 박스 높이 */
-    overflow: hidden;        /* 이미지가 박스를 넘으면 숨김 */
-    border: 2px solid #ccc;  /* 박스 테두리 */
-    border-radius: 10px;     /* 모서리 둥글게 */
-    display: flex;
-    justify-content: center; /* 수평 중앙 정렬 */
-    align-items: center;     /* 수직 중앙 정렬 */
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-box img {
-    width: 100%;              /* 박스 너비에 맞춤 */
-    height: 100%;             /* 박스 높이에 맞춤 */
-    object-fit: cover;        /* 비율 유지하지 않고 박스에 맞춰 잘림 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-.image-thumbnail {
-    width:100%;
-    height:100%;
-    object-fit:cover;
+/* -------------------- 이미지 아래 텍스트 -------------------- */
+.caption {
+  width: 300px;
+  margin: 8px auto 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
 }
 
-.banner {
-    width: 100%;           /* 화면 가로 전체 */
-    height: 200px;         /* 배너 높이 */
-    overflow: hidden;      /* 이미지 잘림 방지 */
+.image-container {
+  width: 300px;          /* 전체 폭 */
+  margin: 20px auto;     /* 가운데 정렬 */
+  text-align: center;    /* 텍스트 중앙 정렬 */
 }
 
-.banner img {
-    width: 100%;           /* 가로 꽉 채우기 */
-    height: 100%;          /* 높이 맞춤 */
-    object-fit: cover;     /* 박스에 맞춰 이미지 잘림 */
-    display: block;        /* 이미지 아래 공백 제거 */
+.image-box {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* 비율 유지하면서 꽉 채우기 */
+  display: block;
+}
+
+.image-text {
+  margin-top: 8px;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.image-row {
+  display: flex;
+  justify-content: center; /* 가운데 정렬 */
+  flex-wrap: wrap;         /* 화면 줄어들면 자동 줄바꿈 */
+  gap: 20px;               /* 각 이미지 간격 */
+  padding: 20px 40px;
 }
