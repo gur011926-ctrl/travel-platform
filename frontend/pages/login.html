@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>로그인</title>
-  <link rel="stylesheet" href="../css/style.css" />
+  <meta charset="UTF-8">
+  <title>로그인 | Voyage</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <header>
-    <h1>로그인</h1>
-  </header>
+  <section class="login-container">
+    <h2>로그인</h2>
 
-  <main>
-    <form id="login-form">
-      <input id="login-email" type="text" placeholder="이메일" required />
-      <input id="login-password" type="password" placeholder="비밀번호" required />
-      <button type="submit">로그인</button>
-    </form>
-  </main>
+    <div class="sns-login">
+      <button class="kakao">카카오로 로그인</button>
+      <button class="naver">네이버로 로그인</button>
+    </div>
 
-  <script src="../js/main.js"></script>
+    <div class="normal-login">
+      <input type="text" placeholder="아이디를 입력해주세요.">
+      <input type="password" placeholder="비밀번호를 입력해주세요.">
+      <button class="login-btn">로그인</button>
+    </div>
+  </section>
 </body>
 </html>

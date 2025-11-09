@@ -1,23 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <title>회원가입</title>
-  <link rel="stylesheet" href="../css/style.css" />
+  <meta charset="UTF-8">
+  <title>회원가입 | Voyage</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-  <header>
-    <h1>회원가입</h1>
-  </header>
+  <section class="signup-container">
+    <h2>회원가입</h2>
 
-  <main>
-    <form id="signup-form">
-      <input id="email" type="text" placeholder="이메일" required />
-      <input id="password" type="password" placeholder="비밀번호" required />
-      <button type="submit">회원가입</button>
-    </form>
-  </main>
-
-  <script src="../js/main.js"></script>
+    <div class="signup-box">
+      <input type="text" placeholder="아이디를 입력해주세요.">
+      <input type="email" placeholder="이메일을 입력해주세요.">
+      <input type="password" placeholder="비밀번호를 입력해주세요.">
+      <input type="password" placeholder="비밀번호 확인">
+      <button class="signup-btn">회원가입</button>
+    </div>
+  </section>
 </body>
 </html>

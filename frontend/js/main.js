@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const travelList = document.getElementById("travel-list");
   if (travelList) {
     const travels = [
-      { name: "파리", image: "images/paris.jpg" },
-      { name: "도쿄", image: "images/tokyo.jpg" },
+      { name: "파리 ", image: "images/paris.jpg" },
+      { name: "도쿄 여행!", image: "images/tokyo.jpg" },
       { name: "서울", image: "images/seoul.jpg" },
     ];
 

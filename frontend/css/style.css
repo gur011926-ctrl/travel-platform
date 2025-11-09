@@ -1,61 +1,138 @@
 body {
-  font-family: "Noto Sans KR", sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #f5f5f5;
 }
 
+/* 상단 헤더 */
 header {
-  background-color: #2c3e50;
-  color: white;
-  padding: 15px;
-  text-align: center;
+  width: 100%;
+  background: white;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
+.logo {
+  font-size: 26px;
+  font-weight: bold;
 }
 
-nav a:hover {
-  text-decoration: underline;
+.search-box input {
+  width: 260px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
 }
 
-main {
-  padding: 20px;
-}
-
-input, button {
-  display: block;
-  margin: 10px 0;
-  padding: 10px;
-  width: 250px;
-  max-width: 100%;
-}
-
-button {
-  background-color: #3498db;
-  color: white;
+.top-buttons button {
+  padding: 8px 16px;
   border: none;
+  margin-left: 10px;
+  border-radius: 8px;
+  background: #ececec;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #2980b9;
-}
-
-.travel-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.travel-card {
+/* 내비게이션 */
+nav {
   background: white;
+  border-bottom: 1px solid #ddd;
+}
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 15px 40px;
+}
+nav li {
+  cursor: pointer;
+}
+
+/* 메인 배너 */
+.banner {
+  width: 100%;
+  height: 350px;
+  background: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #666;
+}
+
+/* 특가 여행 섹션 */
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 30px 40px 10px;
+}
+
+.photo-grid {
+  display: flex;
+  gap: 20px;
+  padding: 0 40px 40px;
+}
+
+.photo-box {
+  width: 220px;
+  height: 150px;
+  background: #e2e2e2;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 15px;
-  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-weight: bold;
+}
+
+/* 로그인 / 회원가입 공통 스타일 */
+.login-container, .signup-container {
+  width: 400px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
+}
+
+.sns-login button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.kakao { background: #FDDC3F; }
+.naver { background: #1EC800; color: white; }
+
+.normal-login input, .signup-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.login-btn, .signup-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #4DA6FF;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
 }
